@@ -4,11 +4,11 @@ require 'rest-client'
 require 'yaml'
 require 'time'
 
-SERVER = "http://localhost:9999"
+SERVER = "http://10.12.202.141:9999"
 TIMEOUT = 300000
 
 TOURNAMENT_ID = "main"
-AUTHORIZATION_TOKEN = "VigilantBlueVioletSkunkOx"
+AUTHORIZATION_TOKEN = "ResponsibleBrownMallardAlligator"
 
 STD_ANGLE = 5.0
 STD_MOVE = 30.0
@@ -87,7 +87,7 @@ bot = Bot.new(rest_client)
 
 p "Bot initialized"
 
-move_direction = 1
+# move_direction = 1
 
 
 while true
