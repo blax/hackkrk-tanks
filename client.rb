@@ -105,9 +105,9 @@ while true
 
   game_in_progress = true
   while game_in_progress
-    power = (-100..100).to_a.select{|x| x % 5 == 0}.sample
+    power = (1..100).to_a.select{|x| x % 5 == 0}.sample
     p "Shooting with power #{power}"
-    response = bot.perform_move(45, power, 0)
+    response = bot.perform_move([45, -45].sample, power, 0)
 
     tanks = Tanks.new(response["tanks"])
 
