@@ -2,6 +2,7 @@
 
 require 'rest-client'
 require 'yaml'
+require 'time'
 
 SERVER = "http://localhost:9999"
 TIMEOUT = 300000
@@ -19,6 +20,13 @@ LEFT_BOUND = -500
 RIGHT_BOUND = 500
 LOWER_BOUND = 0
 UPPER_BOUND = 500
+
+RESPONSES_DIR = './responses'
+
+def save_response_to_file(action_name, response)
+  filename = "#{action_name}_#{Time.now.to_i}"
+  File.open("#{RESPONSES_DIR}/#{filename}.json", 'w') { |file| file.write(response) }
+end
 
 class RestClientWrapper < Struct.new(:tournamentId, :authorization)
   def post_move(params)
@@ -43,12 +51,16 @@ class Bot < Struct.new(:rest_client)
     }
 
     response = rest_client.post_move(payload)
-    JSON.parse(response)
+    JSON.parse(response).tap { |parsed_response|
+      save_response_to_file('perform_move', parsed_response)
+    }
   end
 
   def wait_for_game()
     response = rest_client.wait_for_game()
-    JSON.parse(response)
+    JSON.parse(response).tap { |parsed_response|
+      save_response_to_file('wait_for_game', parsed_response)
+    }
   end
 end
 
