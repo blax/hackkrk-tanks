@@ -54,7 +54,7 @@ class Bot < Struct.new(:rest_client)
     }
 
     response = rest_client.post_move(payload)
-    save_response_to_file('perform_move', response)
+    save_response_to_file("perform_move_#{angle}_#{power}_#{distance}", response)
     JSON.parse(response)
   end
 
