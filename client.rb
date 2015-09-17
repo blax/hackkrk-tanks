@@ -94,28 +94,24 @@ p "Bot initialized"
 
 # move_direction = 1
 
+SHOT_POWERS_TO_TEST = (0..100).to_a
+turn = 0
 
 while true
+
   game = bot.wait_for_game()
 
   p "--- Joining game #{game['name']}"
 
   game_in_progress = true
   while game_in_progress
-    if rand(2) > 0
-      distance = rand(2) > 0 ? - STD_MOVE : STD_MOVE
-
-      p "Moving #{distance}"
-      response = bot.perform_move(0, 0, distance)
-    else
-      p "Shooting #{STD_ANGLE} with power #{POWER}"
-      response = bot.perform_move(STD_ANGLE, POWER, 0)
-    end
+    response = bot.perform_move(45, SHOT_POWERS_TO_TEST[turn % SHOT_POWERS_TO_TEST.size + 1], 0)
 
     tanks = Tanks.new(response["tanks"])
 
     p "My position x: #{tanks.my_tank.pos_x}"
 
+    turn += 1
     game_in_progress = ! response['last']
   end
 
