@@ -92,7 +92,7 @@ p "Bot initialized"
 
 # move_direction = 1
 
-SHOT_POWERS_TO_TEST = (0..100).to_a
+SHOT_POWERS_TO_TEST = (1..100).to_a
 turn = 0
 
 while true
