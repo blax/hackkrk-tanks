@@ -14,6 +14,12 @@ STD_MOVE = 30.0
 POWER = 80
 USERNAME = "choke"
 
+TANK_SIZE = 30
+LEFT_BOUND = -500
+RIGHT_BOUND = 500
+LOWER_BOUND = 0
+UPPER_BOUND = 500
+
 class RestClientWrapper < Struct.new(:tournamentId, :authorization)
   def post_move(params)
     url = "#{SERVER}/tournaments/#{tournamentId}/moves"
