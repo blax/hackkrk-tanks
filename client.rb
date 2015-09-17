@@ -94,7 +94,7 @@ p "Bot initialized"
 
 # move_direction = 1
 
-SHOT_POWERS_TO_TEST = (0..100)
+SHOT_POWERS_TO_TEST = (0..100).to_a
 turn = 0
 
 while true
@@ -105,7 +105,7 @@ while true
 
   game_in_progress = true
   while game_in_progress
-    response = bot.perform_move(45, SHOT_POWERS_TO_TEST[turn], 0)
+    response = bot.perform_move(45, SHOT_POWERS_TO_TEST[turn % SHOT_POWERS_TO_TEST.size + 1], 0)
 
     tanks = Tanks.new(response["tanks"])
 
