@@ -105,7 +105,9 @@ while true
 
   game_in_progress = true
   while game_in_progress
-    response = bot.perform_move(45, SHOT_POWERS_TO_TEST[turn % SHOT_POWERS_TO_TEST.size + 1], 0)
+    power = SHOT_POWERS_TO_TEST[turn % SHOT_POWERS_TO_TEST.size + 1]
+    p "Shooting with power #{power}"
+    response = bot.perform_move(45, power, 0)
 
     tanks = Tanks.new(response["tanks"])
 
