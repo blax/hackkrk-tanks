@@ -3,11 +3,12 @@
 require 'rest-client'
 require 'yaml'
 require 'time'
+require 'json'
 
 SERVER = "http://10.12.202.141:9999"
 TIMEOUT = 300000
 
-TOURNAMENT_ID = "main"
+TOURNAMENT_ID = "master"
 AUTHORIZATION_TOKEN = "ResponsibleBrownMallardAlligator"
 
 STD_ANGLE = 5.0
