@@ -12,7 +12,7 @@ AUTHORIZATION_TOKEN = "VigilantBlueVioletSkunkOx"
 STD_ANGLE = 5.0
 STD_MOVE = 30.0
 POWER = 80
-USERNAME = "Alex"
+USERNAME = "choke"
 
 class RestClientWrapper < Struct.new(:tournamentId, :authorization)
   def post_move(params)
