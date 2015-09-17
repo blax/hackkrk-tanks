@@ -40,6 +40,8 @@ class RestClientWrapper < Struct.new(:tournamentId, :authorization)
     url = "#{SERVER}/tournaments/#{tournamentId}/games/my/setup"
     headers = { 'Authorization' => authorization, 'content-type' => 'application/json' }
     RestClient::Request.execute(method: :get, url: url, headers: headers, timeout: TIMEOUT)
+  rescue => e
+    retry
   end
 end
 
@@ -62,6 +64,8 @@ class Bot < Struct.new(:rest_client)
     JSON.parse(response).tap { |parsed_response|
       save_response_to_file('wait_for_game', parsed_response)
     }
+  rescue => e
+    retry
   end
 end
 
