@@ -95,9 +95,13 @@ p "Bot initialized"
 
 # move_direction = 1
 
+MOVES = (1..100).to_a.select{|x| x % 5 == 0}.map{|x| [[x, 30], [x, -30], [x, 45], [x, -45], [x, 60], [x, -60]]}.flatten(1)
+
 turn = 0
 
 while true
+
+  p "--- waiting for game"
 
   game = bot.wait_for_game()
 
@@ -105,16 +109,22 @@ while true
 
   game_in_progress = true
   while game_in_progress
-    power = (1..100).to_a.select{|x| x % 5 == 0}.sample
-    p "Shooting with power #{power}"
-    response = bot.perform_move([45, -45].sample, power, 0)
+    power, angle = MOVES[turn % MOVES.size]
+
+
+    p "Shooting with power #{power} [#{angle}]"
+    response = bot.perform_move(angle, power, 0)
 
     tanks = Tanks.new(response["tanks"])
 
-    p "My position x: #{tanks.my_tank.pos_x}"
+    if tanks.my_tank
+      p "My position x: #{tanks.my_tank.pos_x}"
 
-    turn += 1
-    game_in_progress = ! response['last']
+      turn += 1
+      game_in_progress = ! response['last']
+    else
+      game_in_progress = false
+    end
   end
 
   p " --- game finished"
