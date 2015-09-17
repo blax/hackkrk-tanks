@@ -34,6 +34,9 @@ class RestClientWrapper < Struct.new(:tournamentId, :authorization)
     url = "#{SERVER}/tournaments/#{tournamentId}/moves"
     headers = { 'Authorization' => authorization, 'content-type' => 'application/json' }
     RestClient::Request.execute(method: :post, payload: params.to_json, url: url, headers: headers, timeout: TIMEOUT)
+  rescue => e
+    p ["Move Failed", e]
+    nil
   end
 
   def wait_for_game()
@@ -92,7 +95,6 @@ p "Bot initialized"
 
 # move_direction = 1
 
-SHOT_POWERS_TO_TEST = (1..100).to_a
 turn = 0
 
 while true
@@ -103,7 +105,7 @@ while true
 
   game_in_progress = true
   while game_in_progress
-    power = SHOT_POWERS_TO_TEST[turn % SHOT_POWERS_TO_TEST.size + 1]
+    power = (-100..100).to_a.select{|x| x % 5 == 0}.sample
     p "Shooting with power #{power}"
     response = bot.perform_move(45, power, 0)
 
