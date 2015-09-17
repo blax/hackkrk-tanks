@@ -1,0 +1,300 @@
+{
+  "number" : 1,
+  "tanks" : [ {
+    "name" : "ItaStallion",
+    "color" : "0xd957e2",
+    "hp" : 100,
+    "position" : {
+      "x" : -26.43,
+      "y" : 56.76
+    },
+    "alive" : true
+  }, {
+    "name" : "Chris",
+    "color" : "0xd58a6d",
+    "hp" : 100,
+    "position" : {
+      "x" : 48.43,
+      "y" : 115.5
+    },
+    "alive" : true
+  }, {
+    "name" : "killerBrick",
+    "color" : "0xc27ae7",
+    "hp" : 100,
+    "position" : {
+      "x" : 375.14,
+      "y" : 156.98
+    },
+    "alive" : true
+  }, {
+    "name" : "42",
+    "color" : "0xa7a77d",
+    "hp" : 100,
+    "position" : {
+      "x" : -236.29,
+      "y" : 126.42
+    },
+    "alive" : true
+  }, {
+    "name" : "choke",
+    "color" : "0xed1569",
+    "hp" : 100,
+    "position" : {
+      "x" : -331.14,
+      "y" : 117.19
+    },
+    "alive" : true
+  }, {
+    "name" : "DROP TABLE",
+    "color" : "0x7e9909",
+    "hp" : 50,
+    "position" : {
+      "x" : 196.29,
+      "y" : 137.88
+    },
+    "alive" : true
+  } ],
+  "outcome" : [ {
+    "name" : "ItaStallion",
+    "color" : "0xd957e2",
+    "type" : "ground_hit",
+    "hitCoordinates" : {
+      "x" : 1.49,
+      "y" : 72.16
+    },
+    "target" : null,
+    "targetDestroyed" : false,
+    "bulletTrajectory" : [ {
+      "x" : -26.43,
+      "y" : 66.76
+    }, {
+      "x" : 1.49,
+      "y" : 72.16
+    } ],
+    "tankMovement" : [ {
+      "x" : -26.43,
+      "y" : 56.76
+    } ]
+  }, {
+    "name" : "Chris",
+    "color" : "0xd58a6d",
+    "type" : "miss",
+    "hitCoordinates" : null,
+    "target" : null,
+    "targetDestroyed" : false,
+    "bulletTrajectory" : null,
+    "tankMovement" : [ {
+      "x" : 48.43,
+      "y" : 115.5
+    } ]
+  }, {
+    "name" : "killerBrick",
+    "color" : "0xc27ae7",
+    "type" : "ground_hit",
+    "hitCoordinates" : {
+      "x" : 428.55,
+      "y" : 155.14
+    },
+    "target" : null,
+    "targetDestroyed" : false,
+    "bulletTrajectory" : [ {
+      "x" : 375.14,
+      "y" : 166.98
+    }, {
+      "x" : 374.83,
+      "y" : 179.34
+    }, {
+      "x" : 374.67,
+      "y" : 190.63
+    }, {
+      "x" : 374.67,
+      "y" : 200.88
+    }, {
+      "x" : 374.81,
+      "y" : 210.15
+    }, {
+      "x" : 375.1,
+      "y" : 218.46
+    }, {
+      "x" : 375.54,
+      "y" : 225.85
+    }, {
+      "x" : 376.11,
+      "y" : 232.34
+    }, {
+      "x" : 376.83,
+      "y" : 237.96
+    }, {
+      "x" : 377.7,
+      "y" : 242.72
+    }, {
+      "x" : 378.7,
+      "y" : 246.64
+    }, {
+      "x" : 379.85,
+      "y" : 249.72
+    }, {
+      "x" : 381.15,
+      "y" : 251.99
+    }, {
+      "x" : 382.58,
+      "y" : 253.44
+    }, {
+      "x" : 384.17,
+      "y" : 254.08
+    }, {
+      "x" : 385.9,
+      "y" : 253.91
+    }, {
+      "x" : 387.77,
+      "y" : 252.93
+    }, {
+      "x" : 389.79,
+      "y" : 251.15
+    }, {
+      "x" : 391.94,
+      "y" : 248.58
+    }, {
+      "x" : 394.22,
+      "y" : 245.23
+    }, {
+      "x" : 396.63,
+      "y" : 241.1
+    }, {
+      "x" : 399.17,
+      "y" : 236.23
+    }, {
+      "x" : 401.82,
+      "y" : 230.61
+    }, {
+      "x" : 404.58,
+      "y" : 224.27
+    }, {
+      "x" : 407.45,
+      "y" : 217.24
+    }, {
+      "x" : 410.42,
+      "y" : 209.52
+    }, {
+      "x" : 413.48,
+      "y" : 201.15
+    }, {
+      "x" : 416.64,
+      "y" : 192.15
+    }, {
+      "x" : 419.87,
+      "y" : 182.55
+    }, {
+      "x" : 423.18,
+      "y" : 172.36
+    }, {
+      "x" : 426.57,
+      "y" : 161.61
+    }, {
+      "x" : 428.55,
+      "y" : 155.14
+    } ],
+    "tankMovement" : [ {
+      "x" : 375.14,
+      "y" : 156.98
+    } ]
+  }, {
+    "name" : "42",
+    "color" : "0xa7a77d",
+    "type" : "ground_hit",
+    "hitCoordinates" : {
+      "x" : -362.51,
+      "y" : 133.79
+    },
+    "target" : null,
+    "targetDestroyed" : false,
+    "bulletTrajectory" : [ {
+      "x" : -236.29,
+      "y" : 136.42
+    }, {
+      "x" : -263.63,
+      "y" : 137.57
+    }, {
+      "x" : -289.34,
+      "y" : 137.9
+    }, {
+      "x" : -313.59,
+      "y" : 137.45
+    }, {
+      "x" : -336.53,
+      "y" : 136.24
+    }, {
+      "x" : -358.27,
+      "y" : 134.32
+    }, {
+      "x" : -362.51,
+      "y" : 133.79
+    } ],
+    "tankMovement" : [ {
+      "x" : -236.29,
+      "y" : 126.42
+    } ]
+  }, {
+    "name" : "choke",
+    "color" : "0xed1569",
+    "type" : "ground_hit",
+    "hitCoordinates" : {
+      "x" : -381.43,
+      "y" : 144.37
+    },
+    "target" : null,
+    "targetDestroyed" : false,
+    "bulletTrajectory" : [ {
+      "x" : -331.14,
+      "y" : 127.19
+    }, {
+      "x" : -337.25,
+      "y" : 132.65
+    }, {
+      "x" : -343.12,
+      "y" : 137.24
+    }, {
+      "x" : -348.76,
+      "y" : 140.95
+    }, {
+      "x" : -354.18,
+      "y" : 143.83
+    }, {
+      "x" : -359.39,
+      "y" : 145.87
+    }, {
+      "x" : -364.39,
+      "y" : 147.09
+    }, {
+      "x" : -369.19,
+      "y" : 147.49
+    }, {
+      "x" : -373.81,
+      "y" : 147.09
+    }, {
+      "x" : -378.22,
+      "y" : 145.88
+    }, {
+      "x" : -381.43,
+      "y" : 144.37
+    } ],
+    "tankMovement" : [ {
+      "x" : -331.14,
+      "y" : 117.19
+    } ]
+  }, {
+    "name" : "DROP TABLE",
+    "color" : "0x7e9909",
+    "type" : "miss",
+    "hitCoordinates" : null,
+    "target" : null,
+    "targetDestroyed" : false,
+    "bulletTrajectory" : null,
+    "tankMovement" : [ {
+      "x" : 196.29,
+      "y" : 137.88
+    } ]
+  } ],
+  "last" : false
+}
